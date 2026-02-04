@@ -94,7 +94,7 @@ Once the alert triggered, an incident was automatically created in Microsoft Sen
 ```kql
 SigninLogs
 | where TimeGenerated > ago(7d)
-| where UserPrincipalName == "arisa_admin@lognpacific.com"
+| where UserPrincipalName == "omitted"
 | project TimeGenerated,
           UserPrincipalName,
           City = tostring(parse_json(LocationDetails).city),
